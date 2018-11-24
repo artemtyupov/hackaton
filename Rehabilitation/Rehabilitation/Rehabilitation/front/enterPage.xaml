@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
+            x:Class="Rehabilitation.enterPage">
+
+    <ContentPage Title="Профайл">
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout.Children>
+
+                    <Label Text="ФИО:"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+                    <Entry x:Name="getFIO"
+                       WidthRequest="1000"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                    <Label Text="Email:"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+                    <Entry x:Name="getEmail"
+                       WidthRequest="1000"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                    <Label Text="Телефон:"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+                    <Entry x:Name="getTelephone"
+                       WidthRequest="1000"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                    <Picker x:Name="pickUser"
+                        SelectedIndex="1">
+                        <Picker.Items >
+                            <x:String>Мужской</x:String>
+                            <x:String>Женский</x:String>
+                        </Picker.Items>
+                    </Picker >
+
+                    <Entry x:Name="enSex"
+                       WidthRequest="1000"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                    <Label Text="Возраст:"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+                    <Entry x:Name="enAge"
+                       WidthRequest="1000"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+
+                    <Label x:Name="lbID" 
+                    Text="ID: "
+                    HorizontalOptions="Center"/>
+
+                    <Button Text="Изменить"
+                      WidthRequest="150"
+                      HorizontalOptions="Center"
+                      VerticalOptions="CenterAndExpand" />
+
+                </StackLayout.Children>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Пациенты">
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout.Children>
+                    <Label Text="Список пациентов:"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                    <ListView>
+                        <ListView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Вася</x:String>
+                                <x:String>Федя</x:String>
+                                <x:String>Жора</x:String>
+                            </x:Array>
+                        </ListView.ItemsSource>
+                    </ListView>
+
+                </StackLayout.Children>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Курсы">
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout.Children>
+                    <Label Text="Список курсов:"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                    <ListView>
+                        <ListView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Упрощенный курс</x:String>
+                                <x:String>Стандартный курс</x:String>
+                                <x:String>Ускоренный курс</x:String>
+                            </x:Array>
+                        </ListView.ItemsSource>
+                    </ListView>
+
+                </StackLayout.Children>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+
+</TabbedPage>

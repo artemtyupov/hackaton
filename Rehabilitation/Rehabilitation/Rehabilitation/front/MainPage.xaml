@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Rehabilitation"
+             x:Class="Rehabilitation.MainPage">
+
+
+
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout.Children>
+                <Label Text="Логин:"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+                <Entry x:Name="enLog"
+                       WidthRequest="1000"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Text="Пароль:"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+                <Entry x:Name="enPass"
+                       WidthRequest="1000"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+                <Label Text="Выберите категорию пользователя."
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <Picker x:Name="pickUser"
+                        SelectedIndex="1">
+                    <Picker.Items >
+                        <x:String>Врач</x:String>
+                        <x:String>Пациент</x:String>
+                    </Picker.Items>
+                </Picker >
+                <Button Text="Вход"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center"
+                      Clicked="btSingIn_Clicked" 
+                      WidthRequest="150"/>
+                    
+                <Button Text="Регистрация"
+                      HorizontalOptions="Center"
+                      VerticalOptions="Center"
+                      Clicked="btSingUp_Clicked" 
+                      WidthRequest="150"/>
+                </StackLayout.Children>
+            </StackLayout>
+        </ContentPage.Content>
+
+</ContentPage>
